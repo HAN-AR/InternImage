@@ -32,7 +32,7 @@ class SwissOkutamaDataset(CustomDataset):
 
     def __init__(self, **kwargs):
         super(SwissOkutamaDataset, self).__init__(
-            img_suffix='.JPG',
+            img_suffix='.png',
             seg_map_suffix='.png',
             reduce_zero_label=True,
             **kwargs)
