@@ -6,3 +6,5 @@ classification/convertor/
 segmentation/convertor/
 checkpoint_dir/
 demo/
+segmentation/work_dirs/
+segmentation/ops_dcnv3/build/
