@@ -84,7 +84,10 @@ def main():
                 os.path.join(tmp_dir, 'images', dataset_mode, '*.JPG'))
             src_prog_bar = mmcv.ProgressBar(len(img_list))
             for img in img_list:
-                shutil.copy(img, os.path.join(out_dir, 'img_dir', dataset_mode))
+                # Open the image file.
+                img_open = Image.open(img)
+                # Save the image as PNG.
+                img_open.save(os.path.join(out_dir, 'img_dir', dataset_mode, osp.splitext(osp.basename(img))[0] + '.png'))
                 src_prog_bar.update()
 
             print('\nProcessing {} annotations...'.format(dataset_mode))
